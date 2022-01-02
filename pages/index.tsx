@@ -6,7 +6,10 @@ import { ethers } from 'ethers'
 import { ExternalProvider } from '@ethersproject/providers'
 
 const Home: NextPage = () => {
-
+  const [token, setToken] = useState('')
+  const [nfts, setNfts] = useState<string[]>([])
+  const [account, setAccount] = useState([])
+  const [contract, setContract] = useState<ethers.Contract>()
 
   const getProvider = async () => {
     const provider = await detectEthereumProvider() as ExternalProvider
@@ -19,13 +22,32 @@ const Home: NextPage = () => {
     return accounts[0]
   }
 
+  const getContract = useCallback(async (newProvider: ethers.providers.Web3Provider) => {
+    const networkID: keyof typeof CloseSeaContract.networks = 
+      await window.ethereum.request({ method: 'net_version' })
+    const networkData = CloseSeaContract.networks[networkID]
+    const signer = newProvider.getSigner()
+
+    if(networkData) {
+      const abi = CloseSeaContract.abi
+      const address = networkData.address
+      const contract = new ethers.Contract(address, abi, signer)
+      return contract
+    } else {
+      console.error('Contract not deployed to detected network')
+    }
+  }, [])
+
   useEffect(() => {
     const loadEthereum = async () => {
       const provider = await getProvider()
       const account = await getAccount()
+      const contract = await getContract(provider)
+      setAccount(account)
+      setContract(contract)
     }
     loadEthereum()
-  }, [])
+  }, [getContract])
 
 
   return (
