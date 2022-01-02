@@ -29,4 +29,25 @@ contract('CloseSeaContract', accounts => {
       assert.equal(symbol, 'CLS')
     })
   })
+
+  describe('minting', () => {
+    it('should create a new token', async () => {
+      const result = await contract.mint('test1')
+      const totalSupply = await contract.totalSupply()
+      assert.equal(totalSupply, 1)
+
+      const event = result.logs[0].args
+
+      assert.equal(
+        event._from, 
+        '0x0000000000000000000000000000000000000000', 
+        'from address should be null'
+      )
+      assert.equal(event._to, accounts[0], 'to address should be the msg.sender')
+
+      // In case you try to mint the same token twice, it should fail
+      await contract.mint('test1').should.be.rejected
+    })
+  })
+  
 })
