@@ -49,5 +49,24 @@ contract('CloseSeaContract', accounts => {
       await contract.mint('test1').should.be.rejected
     })
   })
-  
+
+  describe('indexing', () => {
+    it('should list all NFTs', async () => {
+      // Mint 3 tokens
+      await contract.mint('test2')
+      await contract.mint('test3')
+      await contract.mint('test4')
+
+      const totalSupply = await contract.totalSupply()
+      
+      const result = []
+      for (let i = 0; i < totalSupply; i++) {
+        result.push(await contract.nftArr(i))
+      }
+
+      const expected = ['test1', 'test2', 'test3', 'test4']
+      assert.deepEqual(result, expected)
+    })  
+  })
+
 })
