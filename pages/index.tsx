@@ -4,6 +4,8 @@ import detectEthereumProvider from '@metamask/detect-provider'
 import CloseSeaContract from '../truffle/abis/CloseSea.json'
 import { ethers } from 'ethers'
 import { ExternalProvider } from '@ethersproject/providers'
+import { Navbar } from '../components'
+import styled from 'styled-components'
 
 const Home: NextPage = () => {
   const [token, setToken] = useState('')
@@ -66,9 +68,22 @@ const Home: NextPage = () => {
 
   return (
    <div>
-     HOME
+     <Navbar />
+     {
+       nfts?.map((item, idx) => (
+         <Image key={idx} src={item} alt='#' />
+       ))
+     }
    </div>
   )
 }
+
+const Image = styled.img`
+  width: 100px;
+  height: 100px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  object-fit: cover;
+`
 
 export default Home
