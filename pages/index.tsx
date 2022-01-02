@@ -38,6 +38,17 @@ const Home: NextPage = () => {
     }
   }, [])
 
+  const getNFTs = async (contract: ethers.Contract) => {
+    const totalSupply = await contract.totalSupply()
+    console.log('TOTAL SUPPLY: ', ethers.utils.formatUnits(totalSupply, 0))
+    const nftArr = []
+    for (let i = 0; i < totalSupply; i++) {
+      nftArr.push(await contract.nftArr(i))
+    }
+    setNfts(nftArr)
+    console.log('NFTs: ', nftArr)
+  }
+
   useEffect(() => {
     const loadEthereum = async () => {
       const provider = await getProvider()
@@ -49,6 +60,9 @@ const Home: NextPage = () => {
     loadEthereum()
   }, [getContract])
 
+  useEffect(() => {
+    if (contract) getNFTs(contract)
+  }, [contract])
 
   return (
    <div>
