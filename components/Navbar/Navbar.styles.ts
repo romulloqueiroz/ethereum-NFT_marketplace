@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { color } from '../../styles'
+import { cleanButton, color } from '../../styles'
 
 const InputContainer = styled.div`
   width: 765px;
@@ -25,9 +25,17 @@ const StyledNavbar = styled.nav`
   align-items: center;
 `
 
+const Button = styled.button`
+  ${cleanButton};
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: ${color.darkGrey};
+`
+
 export {
   InputContainer,
   Title,
   Logo,
-  StyledNavbar
+  StyledNavbar,
+  Button
 }

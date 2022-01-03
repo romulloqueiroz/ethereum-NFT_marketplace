@@ -1,13 +1,16 @@
-import React from 'react'
+import { useState } from 'react'
 import Input from '../Input/Input'
 import {
   InputContainer,
   Title,
   Logo,
-  StyledNavbar
+  StyledNavbar,
+  Button
 } from './Navbar.styles'
 
 const Navbar = () => {
+  const [token, setToken] = useState('')
+
   return (
     <StyledNavbar>
       <Logo 
@@ -20,8 +23,12 @@ const Navbar = () => {
       <InputContainer>
         <Input 
           placeholder='Immortalize some shit on Ropsten as a NFT'
+          onChange={(e) => setToken(e.target.value)}
         />
       </InputContainer>
+      <Button>
+        Create
+      </Button>
     </StyledNavbar>
   )
 }
