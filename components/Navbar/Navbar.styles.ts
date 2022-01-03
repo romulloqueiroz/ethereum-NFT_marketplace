@@ -18,11 +18,13 @@ const Logo = styled.img`
 `
 
 const StyledNavbar = styled.nav`
+  width: 100vw;
   height: 72px;
   padding-left: 16px;
   display: flex;
   align-items: center;
   ${shadow.standard};
+  margin-bottom: 36px;
 `
 
 const Button = styled.button`
