@@ -1,6 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
 import Input from '../Input/Input'
+import {
+  InputContainer,
+  Title,
+  Logo,
+  StyledNavbar
+} from './Navbar.styles'
 
 const Navbar = () => {
   return (
@@ -12,31 +17,13 @@ const Navbar = () => {
       <Title>
         CloseSea
       </Title>
-      <Input 
-        placeholder='Immortalize some shit as a NFT'
-      />
+      <InputContainer>
+        <Input 
+          placeholder='Immortalize some shit on Ropsten as a NFT'
+        />
+      </InputContainer>
     </StyledNavbar>
   )
 }
-
-const Title = styled.h1`
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  margin-left: 10px;
-  font-size: 1.4rem;
-`
-
-const Logo = styled.img`
-  height: 40px;
-  width: 40px;
-`
-
-const StyledNavbar = styled.nav`
-  height: 72px;
-  box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
-  padding-left: 16px;
-  display: flex;
-  align-items: center;
-`
 
 export default Navbar
