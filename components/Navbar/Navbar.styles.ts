@@ -3,6 +3,7 @@ import { cleanButton, color, shadow } from '../../styles'
 
 const InputContainer = styled.div`
   width: 765px;
+  margin-left: 20px;
 `
 
 const Title = styled.h1`
@@ -32,6 +33,7 @@ const Button = styled.input`
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: ${color.darkGrey};
+  margin: 0 20px;
 `
 
 export {

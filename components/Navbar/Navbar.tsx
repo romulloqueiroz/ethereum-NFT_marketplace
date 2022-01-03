@@ -24,15 +24,15 @@ const Navbar = () => {
   }
 
   return (
-    <StyledNavbar>
-      <Logo 
-        src='assets/logo.png'
-        alt='CloseSea Logo'
-      />
-      <Title>
-        CloseSea
-      </Title>
-      <form onSubmit={mint}>
+    <form onSubmit={mint}>
+      <StyledNavbar>
+        <Logo 
+          src='assets/logo.png'
+          alt='CloseSea Logo'
+        />
+        <Title>
+          CloseSea
+        </Title>
         <InputContainer>
           <Input 
             placeholder='Paste a url here to immortalize some shit on Ropsten as a NFT'
@@ -44,8 +44,8 @@ const Navbar = () => {
           type='submit' 
           value='Create' 
         />
-      </form>
-    </StyledNavbar>
+      </StyledNavbar>
+    </form>
   )
 }
 
