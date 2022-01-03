@@ -75,6 +75,7 @@ const EthereumContext: React.FC = ({ children }) => {
   return (
     <Ethereum.Provider value={{
       nfts,
+      setNfts,
       account,
       contract
     }}>

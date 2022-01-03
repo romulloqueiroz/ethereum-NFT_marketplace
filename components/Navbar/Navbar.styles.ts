@@ -27,7 +27,7 @@ const StyledNavbar = styled.nav`
   margin-bottom: 36px;
 `
 
-const Button = styled.button`
+const Button = styled.input`
   ${cleanButton};
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
