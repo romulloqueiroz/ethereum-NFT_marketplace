@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Input from '../Input/Input'
 
 const Navbar = () => {
   return (
@@ -11,6 +12,9 @@ const Navbar = () => {
       <Title>
         CloseSea
       </Title>
+      <Input 
+        placeholder='Immortalize some shit as a NFT'
+      />
     </StyledNavbar>
   )
 }

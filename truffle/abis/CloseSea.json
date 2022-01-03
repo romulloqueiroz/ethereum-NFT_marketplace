@@ -12720,12 +12720,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xc2B8A148e601a6560C528e5fc73cD5e83Ae4dAb9",
-      "transactionHash": "0x27fb6345ee29b0a4ef92c12b6a60d32b7ae933ae41e70b59ee935452754bbdf7"
+      "address": "0x67612B548d10438F0B43977aC264205C298a0E84",
+      "transactionHash": "0x199ff22e1dee47dc1952f8e712622ad12d3f9a7e6638f95586ea021f24e7a5b4"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-02T21:54:49.610Z",
+  "updatedAt": "2022-01-03T00:50:47.824Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
