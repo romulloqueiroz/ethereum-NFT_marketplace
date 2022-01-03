@@ -23,10 +23,10 @@ const Navbar = () => {
       <InputContainer>
         <Input 
           placeholder='Immortalize some shit on Ropsten as a NFT'
-          onChange={(e) => setToken(e.target.value)}
+          onChange={e => setToken(e.target.value)}
         />
       </InputContainer>
-      <Button>
+      <Button onClick={() => alert('YOU CLICKED!')}>
         Create
       </Button>
     </StyledNavbar>
