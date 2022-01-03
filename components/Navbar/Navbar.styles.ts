@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cleanButton, color } from '../../styles'
+import { cleanButton, color, shadow } from '../../styles'
 
 const InputContainer = styled.div`
   width: 765px;
@@ -19,10 +19,10 @@ const Logo = styled.img`
 
 const StyledNavbar = styled.nav`
   height: 72px;
-  box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
   padding-left: 16px;
   display: flex;
   align-items: center;
+  ${shadow.standard};
 `
 
 const Button = styled.button`

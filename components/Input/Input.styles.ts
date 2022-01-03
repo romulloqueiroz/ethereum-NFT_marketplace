@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { color } from '../../styles'
+import { color, shadow } from '../../styles'
 
 const StyledInput = styled.input<{ placeholder?: string }>`
   border-radius: 10px;
@@ -17,7 +17,7 @@ const StyledInput = styled.input<{ placeholder?: string }>`
   
   :focus {
     outline: none;
-    box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+    ${shadow.standard};
   }
 `
 

@@ -22,7 +22,7 @@ const Navbar = () => {
       </Title>
       <InputContainer>
         <Input 
-          placeholder='Immortalize some shit on Ropsten as a NFT'
+          placeholder='Paste a url here to immortalize some shit on Ropsten as a NFT'
           onChange={e => setToken(e.target.value)}
         />
       </InputContainer>
