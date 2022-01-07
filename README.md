@@ -1,6 +1,6 @@
 # NFT Marketplace Portfolio Project
 
-## An NFT marketplace made in Solidity, NextJs, Typescript, Truffle, and ethersjs
+## A NFT marketplace made in Solidity, NextJs, Typescript, Truffle, and ethersjs
   ---
 ### You can find the deploy here: https://portfolio-ethereum-nft-marketplace.vercel.app/
   ---
