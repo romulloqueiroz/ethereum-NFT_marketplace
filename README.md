@@ -1,5 +1,5 @@
 ### Ropsten has been deprecated, so it won't work! 😱
-### I have to update it but right now I'm lazy. The code is still valid though.
+### I have to update it but right now I'm feeling lazy. The code is still valid though.
 
 # NFT Marketplace Portfolio Project
 
